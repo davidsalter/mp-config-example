@@ -19,6 +19,13 @@
       <version>8.0</version>
       <scope>provided</scope>
     </dependency>
+        <dependency>
+      <groupId>org.eclipse.microprofile</groupId>
+      <artifactId>microprofile</artifactId>
+      <version>1.4</version>
+      <type>pom</type>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
   <build>
     <finalName>${project.artifactId}</finalName>
@@ -45,7 +52,7 @@
               </execution>
             </executions>
             <configuration>
-              <args></args>
+              <args>-Dapplication.mode=prod</args>
               <context>ROOT</context>
               <tomeeClassifier>microprofile</tomeeClassifier>
             </configuration>
